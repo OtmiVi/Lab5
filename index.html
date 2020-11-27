@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lab5</title>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDb9OzInX3U0cfga2_UBq7-MOlDjC0o8yo&callback=initMap&libraries=&v=weekly"
+      defer></script>
+    <link rel="stylesheet" href="style.css">
+    
+  </head>
+  <body>
+  	<script>
+      function initMap() {
+        const uluru = { lat: 48.9307777, lng: 24.6927974 };
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 10,
+          center: uluru,
+        });
+        const marker = new google.maps.Marker({
+          position: uluru,
+          map: map,
+        });
+      }
+    </script>
+
+    <h1>Карта</h1>
+    <div id="map" class="content"></div>
+
+    
+  	<h1>Погода</h1>
+  	<div class="content">
+  		<div id="MeteoInformerWrapOuther">
+		<div id="MeteoInformerWrap">
+		<script type="text/javascript" src="https://meteo.ua/var/informers.js"></script>
+		<script type="text/javascript">
+		makeMeteoInformer("https://meteo.ua/informer/get.php?cities=557;67&w=309&lang=ua&rnd=1&or=vert&clr=6&dt=today&style=classic",309,241);
+		</script>
+		</div>
+  	</div>
+	
+
+	<h1>Курс валют</h1>
+	<div class="content">
+		<div id="minfin-informer-m1Fn-region">Загружаем <a href="https://minfin.com.ua/currency/" target="_blank">курсы валют</a> от minfin.com.ua</a></div><script>var iframe = '<ifra'+'me width="275" height="120" fram'+'eborder="0" src="https://informer.minfin.com.ua/gen/region/34/?color=yellow" vspace="0" scrolling="no" hspace="0" allowtransparency="true"style="width:275px;height:120px;ove'+'rflow:hidden;"></iframe>';var cl = 'minfin-informer-m1Fn-region';document.getElementById(cl).innerHTML = iframe; </script><noscript><img src="https://informer.minfin.com.ua/gen/img.png" width="1" height="1" alt="minfin.com.ua: курсы валют" title="Курс валют" border="0" /></noscript>
+	</div>
+
+	
+
+
+	<h1>Відео з Youtube</h1>
+	<div class="content">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/HJA92LQrsvw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+	
+	<div class="conent">
+		<figure>
+	    <figcaption>Музика:</figcaption>
+	    <audio
+	        controls
+	        src="music.mp3">
+	            Your browser does not support the
+	            <code>audio</code> element.
+	    </audio>
+	 </figure>
+	</div>
+</div>
+</html>
